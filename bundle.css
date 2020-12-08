@@ -473,7 +473,25 @@ body {
     width: 80%;
   }
 }
-.chapter p:nth-child(2):first-letter {
+.content article .lyric_ctn {
+  width: 100%;
+  max-width: 40rem;
+  margin: auto;
+  padding: 0px 1rem 1rem 1rem;
+}
+@media only screen and (min-width: 50em) {
+  .content article .lyric_ctn {
+    width: 80%;
+  }
+}
+.content article .lyric_ctn .lyric_inner {
+  border-left: 4px solid #fff;
+  padding-left: 1.5rem;
+}
+.content article .lyric_ctn .lyric_inner .lyric_p {
+  margin: 0.5rem auto;
+}
+.chapter p.article_p:nth-child(2):first-letter {
   float: left;
   font-size: 3.5rem;
   line-height: 0.65;
