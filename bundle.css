@@ -404,6 +404,13 @@ sup {
 sub {
   bottom: -0.25em;
 }
+body {
+  background-color: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
 .content article {
   width: 100%;
 }
@@ -411,14 +418,21 @@ sub {
   margin-bottom: 2.5rem;
 }
 .content article .chapter .chapter__title {
-  font-size: 24px;
-  line-height: 1.4;
   margin-bottom: 0.5rem;
+  font-size: 20px;
+  line-height: 1.5;
+}
+@media only screen and (min-width: 40em) {
+  .content article .chapter .chapter__title {
+    margin-bottom: 1rem;
+    font-size: 32px;
+    line-height: 1.4;
+  }
 }
 .content article .image__ctn {
   width: 100%;
   height: auto;
-  max-width: 40rem;
+  max-width: 55rem;
   margin: auto;
   padding: 0px 1rem 1.5rem 1rem;
 }
@@ -492,10 +506,13 @@ sub {
 }
 .author-bio {
   margin: 0rem 0;
-  background-color: #f4f4f4;
-  border-top: 3px solid #404040;
+  background-color: #404040;
+  border-top: 3px solid #f4f4f4;
   text-align: left;
   padding: 0.5rem 1rem;
+}
+.author-bio a {
+  color: #fff;
 }
 .author-bio p {
   font-weight: 900;
@@ -744,10 +761,10 @@ header span.logo svg {
   stroke: $fp_red;
 }
 .intro {
-  margin: 0 auto 5rem auto;
-  height: 200vh;
+  margin: 0 auto 4rem auto;
+  height: 100vh;
   position: relative;
-  top: -50px;
+  z-index: 10;
 }
 .intro__ctn {
   position: absolute;
@@ -762,7 +779,6 @@ header span.logo svg {
   width: 100%;
   height: 100vh;
   padding: 0px;
-  top: 50px;
   z-index: -1;
 }
 .intro__bg img {
@@ -774,6 +790,8 @@ header span.logo svg {
 .intro__hed {
   max-width: 60rem;
   margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 2rem;
   text-align: center;
   font-family: "Playfair";
   font-weight: 900;
@@ -784,16 +802,15 @@ header span.logo svg {
 .intro__dek {
   max-width: 40rem;
   margin: auto;
-  margin-top: 20vh;
-  margin-bottom: 70vh;
   text-align: center;
-  font-size: 20px;
-  line-height: 1.5;
+  text-shadow: 0px 0px 2px #000;
+  font-size: 16px;
+  line-height: 1.65;
 }
 @media only screen and (min-width: 50em) {
   .intro__dek {
-    font-size: 24px;
-    line-height: 1.4;
+    font-size: 20px;
+    line-height: 1.5;
   }
 }
 .intro__byline {
@@ -864,6 +881,7 @@ header span.logo svg {
   width: 100%;
   display: inline-block;
   margin-top: 0.5rem;
+  color: #fff;
   font-size: 12px;
 }
 @media only screen and (min-width: 50em) {
@@ -881,5 +899,72 @@ header span.logo svg {
   .chapter h4.chapter__title {
     width: 80%;
   }
+}
+.chapter .imgCollage__outer {
+  margin: 1rem auto 2rem auto;
+  max-width: 55rem;
+}
+.chapter .imgCollage__outer .imgCollage {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 25% 50% 25%;
+}
+.chapter .imgCollage__outer .imgCollage .imgGroup__ctn_2 {
+  grid-column-start: 1;
+  grid-column-end: three;
+}
+@media only screen and (min-width: 40em) {
+  .chapter .imgCollage__outer .imgCollage {
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 50% 50%;
+    max-width: 55rem;
+    max-height: 34.375rem;
+  }
+  .chapter .imgCollage__outer .imgCollage .imgGroup__ctn_2 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+  }
+}
+.chapter .imgCollage__outer .imgCollage .ctn {
+  padding: 0.25rem;
+}
+.chapter .imgGroup1 {
+  display: flex;
+  flex-direction: row;
+  max-width: 55rem;
+  margin: auto;
+}
+.chapter .imgGroup1 .imgGroup__ctn_1 {
+  width: 33%;
+}
+.chapter .imgGroup1 .imgGroup__ctn_2 {
+  width: 66%;
+}
+.chapter .imgGroup1 .imgGroup__ctn_1,
+.chapter .imgGroup1 .imgGroup__ctn_2 {
+  justify-content: space-around;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  display: inline;
+}
+.chapter .imgGroup1 .imgGroup__ctn_1 .imgGroup__img,
+.chapter .imgGroup1 .imgGroup__ctn_2 .imgGroup__img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.chapter .imgGroup__outer {
+  max-width: 55rem;
+  margin: 0.5rem auto 1.5rem auto;
+}
+.chapter .imgGroup__outer .imgGroup2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.chapter .imgGroup__outer .imgGroup2 .imgGroup__ctn_1,
+.chapter .imgGroup__outer .imgGroup2 .imgGroup__ctn_2 {
+  width: 50%;
+  padding: 1rem 0.5rem;
 }
 /*# sourceMappingURL=bundle.css.map */
