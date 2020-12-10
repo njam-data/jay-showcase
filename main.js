@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"or4r":[function(require,module,exports) {
+})({"../../node_modules/lodash.debounce/index.js":[function(require,module,exports) {
 var global = arguments[3];
 /**
  * lodash (Custom Build) <https://lodash.com/>
@@ -497,7 +497,7 @@ function toNumber(value) {
 
 module.exports = debounce;
 
-},{}],"WEtf":[function(require,module,exports) {
+},{}],"utils/is-mobile.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -527,7 +527,10 @@ var isMobile = {
 };
 var _default = isMobile;
 exports.default = _default;
-},{}],"TAPd":[function(require,module,exports) {
+},{}],"../../node_modules/enter-view/enter-view.min.js":[function(require,module,exports) {
+var define;
+"use strict";!function(e){"function"==typeof define&&define.amd?define(e):"undefined"!=typeof module&&module.exports?module.exports=e():window.enterView=e.call(this)}(function(){var e=function(e){function n(){E=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.msRequestAnimationFrame||function(e){return setTimeout(e,1e3/60)}}function t(){if(y&&"number"==typeof y){var e=Math.min(Math.max(0,y),1);return F-e*F}return F}function o(){var e=document.documentElement.clientHeight,n=window.innerHeight||0;F=Math.max(e,n)}function r(){L=!1;var e=t();M=M.filter(function(n){var t=n.getBoundingClientRect(),o=t.top,r=t.bottom,i=t.height,s=o<e,u=r<e;if(s&&!n.__ev_entered){if(m(n),n.__ev_progress=0,h(n,n.__ev_progress),q)return!1}else!s&&n.__ev_entered&&(n.__ev_progress=0,h(n,n.__ev_progress),g(n));if(s&&!u){var d=(e-o)/i;n.__ev_progress=Math.min(1,Math.max(0,d)),h(n,n.__ev_progress)}return s&&u&&1!==n.__ev_progress&&(n.__ev_progress=1,h(n,n.__ev_progress)),n.__ev_entered=s,!0}),M.length||window.removeEventListener("scroll",i,!0)}function i(){L||(L=!0,E(r))}function s(){o(),r()}function u(){o(),r()}function d(e){for(var n=e.length,t=[],o=0;o<n;o+=1)t.push(e[o]);return t}function f(e){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:document;return"string"==typeof e?d(n.querySelectorAll(e)):e instanceof NodeList?d(e):e instanceof Array?e:void 0}function c(){M=f(v)}function a(){window.addEventListener("resize",s,!0),window.addEventListener("scroll",i,!0),window.addEventListener("load",u,!0),s()}function _(){return v?(c(),M&&M.length?(n(),a(),void r()):(console.error("no selector elements found"),!1)):(console.error("must pass a selector"),!1)}var v=e.selector,l=e.enter,m=void 0===l?function(){}:l,w=e.exit,g=void 0===w?function(){}:w,p=e.progress,h=void 0===p?function(){}:p,x=e.offset,y=void 0===x?0:x,A=e.once,q=void 0!==A&&A,E=null,L=!1,M=[],F=0;_()};return e});
+},{}],"graphic.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -535,11 +538,38 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+var _enterView = _interopRequireDefault(require("enter-view"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /* global d3 */
 function resize() {}
 
 function init() {
   console.log('Make something awesome!');
+  (0, _enterView.default)({
+    selector: '.chapter',
+    enter: function enter(el) {
+      var id = d3.select(el).attr('id');
+      console.log('chapter-id', id);
+      var allImg = d3.select(el).selectAll('.img').nodes();
+      allImg.forEach(function (img) {
+        console.log(img.dataset.src);
+        img.src = img.dataset.src;
+      });
+    },
+    offset: 0 // enter at middle of viewport
+
+  });
+  (0, _enterView.default)({
+    selector: '.chapter_hed_img_ctn',
+    enter: function enter(el) {
+      d3.selectAll('.chapter_hed_img_ctn').classed('active', false);
+      el.classList.add('active');
+    },
+    offset: 0.1 // enter at middle of viewport
+
+  });
 }
 
 var _default = {
@@ -547,7 +577,7 @@ var _default = {
   resize: resize
 };
 exports.default = _default;
-},{}],"v9Q8":[function(require,module,exports) {
+},{"enter-view":"../../node_modules/enter-view/enter-view.min.js"}],"footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -646,7 +676,7 @@ var _default = {
   init: init
 };
 exports.default = _default;
-},{}],"epB2":[function(require,module,exports) {
+},{}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _lodash = _interopRequireDefault(require("lodash.debounce"));
@@ -704,5 +734,5 @@ function init() {
 }
 
 init();
-},{"lodash.debounce":"or4r","./utils/is-mobile":"WEtf","./graphic":"TAPd","./footer":"v9Q8"}]},{},["epB2"], null)
+},{"lodash.debounce":"../../node_modules/lodash.debounce/index.js","./utils/is-mobile":"utils/is-mobile.js","./graphic":"graphic.js","./footer":"footer.js"}]},{},["main.js"], null)
 //# sourceMappingURL=/main.js.map
