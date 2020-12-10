@@ -791,11 +791,18 @@ header span.logo svg {
   padding: 0px;
   z-index: -1;
 }
-.intro__bg img {
+.intro__bg .intro__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  opacity: 0.4;
+  transform: scale(1.3);
+  transition: 1200ms ease-in-out;
+}
+.intro__bg .intro__img.active {
+  opacity: 1;
+  transform: scale(1);
 }
 .intro__hed {
   max-width: 60rem;

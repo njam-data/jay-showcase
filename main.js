@@ -547,6 +547,7 @@ function resize() {}
 
 function init() {
   console.log('Make something awesome!');
+  d3.select('.intro__img').classed('active', true);
   (0, _enterView.default)({
     selector: '.chapter',
     enter: function enter(el) {
