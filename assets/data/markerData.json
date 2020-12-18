@@ -1,0 +1,159 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "downtown",
+                "name": "Downtown Easton"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.210405,
+                    40.691546
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "westWard",
+                "name": "West Easton"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.235366,
+                    40.677991
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "wilson",
+                "name": "Wilson"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.2593601,
+                    40.6832623
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "palmer",
+                "name": "Palmer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.3300012,
+                    40.7006325
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "lower_nazareth",
+                "name": "Lower Nazareth"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.3636675,
+                    40.7083363
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "nazareth",
+                "name": "Nazareth"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.3315301,
+                    40.7409816
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "upper_nazareth",
+                "name": "upper_nazareth"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.3640785,
+                    40.7362281
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "bath",
+                "name": "Bath"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.4000157,
+                    40.7271674
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "east_allen",
+                "name": "East Allen"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.453309,
+                    40.7033208
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "moore",
+                "name": "Moore"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.4924025,
+                    40.7830633
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "chapter": "lehigh",
+                "name": "Lehigh"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -75.6103863,
+                    40.7660173
+                ]
+            }
+        }
+    ]
+}
